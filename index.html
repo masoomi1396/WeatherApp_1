@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
+    <link rel="stylesheet" href="assets/css/input.css">
+    <!--~~~~~~~~~~~~~~~ JS ~~~~~~~~~~~~~~~-->
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body class="w-screen h-screen">
+    <div class="container mx-auto flex justify-center items-center w-full h-full">
+        <div id="searchBox" class="w-full h-[105px] md:w-[400px] duration-500 flex flex-col bg-white rounded-xl p-5 space-y-10 shadow-lg shadow-white">
+            <div class="flex justify-between items-start">
+                <div class="flex justify-start items-center w-[80%]">
+                    <i class="fa-solid fa-location-dot text-[28px]"></i>
+                    <input type="text" placeholder="enter your location"
+                        class="ml-2 p-2 uppercase font-bold text-black text-2xl placeholder:font-semibold placeholder:text-xl placeholder:text-gray-400 placeholder:capitalize outline-none">
+                </div>
+                <button  class="fa-solid fa-magnifying-glass p-3 rounded-full text-[22px] text-[#06283D] duration-300 bg-[#dff6ff] ml-2 hover:text-white hover:bg-[#06283D]"></button>
+            </div>
+            <div id="weatherBox" class="hidden flex-col space-y-5 flex-wrap w-full">
+                <figure class="space-y-7">
+                    <img src="assets/image/clear.png" alt="">
+                    <div class="flex flex-col space-y-1">
+                        <span id="temprature" class="text-5xl font-bold text-center">27</span>
+                        <span id="detail" class="text-xl text-center capitalize">Scattered Clouds</span>
+                    </div>
+                </figure>
+                <div class="flex justify-between">
+                    <div class="flex space-x-2 items-center">
+                        <i class="fa-solid fa-water text-4xl"></i>
+                        <div class="flex flex-col">
+                            <span id="humidity" class="text-lg font-bold">75%</span>
+                            <span class="text-md">Humidity</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2 items-center">
+                        <i class="fa-solid fa-wind text-4xl"></i>
+                        <div class="flex flex-col">
+                            <span id="windSpeed" class="text-lg font-bold">3Km/h</span>
+                            <span class="text-md">Wind Speed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="weatherBoxNotFind" class="hidden flex-col flex-wrap w-full">
+                <figure class="space-y-5">
+                    <img src="assets/image/404.png" alt="">
+                    <h3 class="font-bold text-2xl text-[#06283D] text-center mb-5">Oops! Invalid Location</h3>
+                </figure>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
